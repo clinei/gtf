@@ -22,17 +22,21 @@ Lojban:
 	
 	KU < "ku"
 	CU < "cu"
+	NA < "na"
 	
-	selbri < SE? (tanru / brivla) #1, 4 (infinite recursion)
+	selbri < selbri1
+	selbri1 < selbri2 / NA selbri
+	selbri2 < selbri3 (CO selbri2)?
+	selbri3 < selbri4+
+	selbri4 < selbri5
+	selbri5 < selbri6
+	selbri6 < tanru (BO selbri6)?
+	
+	tanru < tanru1 tanru1?
+	tanru1 < tanru2
+	tanru2 < brivla / SE tanru2
 	
 	brivla < gismu
-	
-	tanru < tanruShortScoped / tanruInverted / tanruSimple #2
-	
-	tanruShortScoped < selbri BO selbri
-	tanruInverted < selbri CO selbri
-	tanruSimple < selbri selbri          #3
-	
 	
 	gismu <~ CCVCV / CVCCV
 	CCVCV < C C V C V
@@ -48,5 +52,3 @@ Lojban:
 ##Special
 	comma <- ","
 	dot <- "."
-
-

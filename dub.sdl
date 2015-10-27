@@ -1,4 +1,4 @@
-name "gytyfy"
+name "gtf"
 description "A parser for the Lojban language."
 stringImportPaths "./"
 

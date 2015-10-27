@@ -1,0 +1,52 @@
+Lojban:
+	bridi < sumti bridiTail
+	
+	bridiTail < CU? selbri
+
+	sumti < descriptor selbri KU
+	
+	descriptor < LE
+	
+	SE < switch12 / switch13 / switch14 / switch15
+	switch12 < "se"
+	switch13 < "te"
+	switch14 < "ve"
+	switch15 < "xe"
+	
+	LE < LE1 / LE2
+	LE1 < "le'e" / "le'i" / "lei" / "le"
+	LE2 < "lo'e" / "lo'i" / "loi" / "lo"
+	
+	CO < "co"
+	BO < "bo"
+	
+	KU < "ku"
+	CU < "cu"
+	
+	selbri < SE? (tanru / brivla) #1, 4 (infinite recursion)
+	
+	brivla < gismu
+	
+	tanru < tanruShortScoped / tanruInverted / tanruSimple #2
+	
+	tanruShortScoped < selbri BO selbri
+	tanruInverted < selbri CO selbri
+	tanruSimple < selbri selbri          #3
+	
+	
+	gismu <~ CCVCV / CVCCV
+	CCVCV < C C V C V
+	CVCCV < C V C C V
+	
+	C <- lowercaseConsonant / uppercaseConsonant
+	V <- lowercaseVVowel / uppercaseVVowel
+	lowercaseVVowel <- "a" / "e" / "i" / "o" / "u"
+	uppercaseVVowel <- "A" / "E" / "I" / "O" / "U"
+	lowercaseConsonant <- "b" / "c" / "d" / "f" / "g" / "j" / "k" / "l" / "m" / "n" / "p" / "r" / "s" / "t" / "v" / "x" / "z"
+	uppercaseConsonant <- "B" / "C" / "D" / "F" / "G" / "J" / "K" / "L" / "M" / "N" / "P" / "R" / "S" / "T" / "V" / "X" / "Z"
+	special <- dot / comma
+##Special
+	comma <- ","
+	dot <- "."
+
+

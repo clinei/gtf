@@ -1,0 +1,5 @@
+name "gytyfy"
+description "A parser for the Lojban language."
+stringImportPaths "./"
+
+dependency "pegged" version="~master"
